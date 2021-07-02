@@ -1,0 +1,45 @@
+.input-container {
+  position: relative;
+}
+
+.input-container > i {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+}
+
+.input-container > input {
+  padding-left: 10%;
+  padding-top: 10%;
+}
+
+.timesheet-component {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.timesheets-text{
+  font-size: small;
+}
+
+// .container {
+//   height: 82vh;
+//   width: 90%;
+// box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+//   border: 1px solid lightgray;
+//   background-color: white;
+// }
+
+
+
+.row {
+  background-color: white; 
+  border-style: outset;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+

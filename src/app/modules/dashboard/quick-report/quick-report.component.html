@@ -1,0 +1,69 @@
+<div class="section">
+  <div class="container col-10 col-md-10 mt-4">
+    <div class="row mx-3 mt-3">
+       <div class="col-12">
+          <h2>Quick Reports</h2>
+       </div>
+    </div>
+    <div class="row mx-3">
+       <div class="col-12">
+          Quick access to reports you can run on the fly.
+       </div>
+    </div>
+    <div class="row mx-3 mt-4">
+       <div class="col-4 col-sm-3 mr-3">
+          <!-- onClick="return false;" is used here to stay in the same page without navigating-->
+          <a class="activeRequests" href="#" onClick="return false;" (click)="downloadReport()" [ngClass]="activeRequestsCount > 0 ? 'clickable' : 'nonclickable'" style="text-decoration:none">
+          <div class="card">
+             <div class="card-body">
+                <h2 class="card-title text-primary">{{activeRequestsCount}}</h2>
+                <h5 class="card-text">Active Requests</h5>
+             </div>
+          </div>
+       </a>
+       </div>
+       <div class="col-4 col-sm-3 mx-3">
+          <div class="card">
+             <div class="card-body">
+                <h2 class="card-title text-primary">0</h2>
+                <h5 class="card-text">Starting in 30 days</h5>
+             </div>
+          </div>
+       </div>
+       <div class="col-4 col-sm-3 mx-3">
+          <div class="card">
+             <div class="card-body">
+                <h2 class="card-title text-primary">0</h2>
+                <h5 class="card-text">Ending in 30 days</h5>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="row mx-3 mt-5">
+       <div class="col-3 col-sm-3 mr-3">
+          <div class="card">
+             <div class="card-body">
+                <h2 class="card-title text-primary">0</h2>
+                <h5 class="card-text">Active Assignments</h5>
+             </div>
+          </div>
+       </div>
+       <div class="col-3 col-sm-3 mx-3">
+          <div class="card">
+             <div class="card-body">
+                <h2 class="card-title text-primary">0</h2>
+                <h5 class="card-text">Active Requests</h5>
+             </div>
+          </div>
+       </div>
+       <div class="col-3 col-sm-3 mx-3">
+          <div class="card">
+             <div class="card-body">
+                <h2 class="card-title text-primary">0</h2>
+                <h5 class="card-text">Active Requests</h5>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+</div>

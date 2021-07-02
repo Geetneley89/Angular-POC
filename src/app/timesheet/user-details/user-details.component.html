@@ -1,0 +1,33 @@
+<div>
+    <h2> {{ user?.designation }} </h2>
+</div>
+<div>
+<table  >
+    <tbody>
+      <tr> 
+        <td><b>Assignment Id </b></td>
+        <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span>&nbsp;&nbsp;&nbsp;</span>{{ user?.id}}</td>
+      </tr>
+      <tr> 
+        <td><b>Industry</b></td>
+        <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span>&nbsp;&nbsp;&nbsp;</span>IT</td>
+      </tr>
+      <tr> 
+        <td><b>Date Range</b></td>
+        <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span>&nbsp;&nbsp;&nbsp;</span>{{dateRangeSelected?.start | date: 'M/d/YYYY'}}  - {{dateRangeSelected?.end | date: 'M/d/YYYY'}}</td>
+      </tr>
+      <tr> 
+        <td><b>Cost Center</b></td>
+        <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span>&nbsp;&nbsp;&nbsp;</span>CT-Voice</td>
+      </tr>
+      <tr> 
+        <td><b>Hiring Manager</b></td>
+        <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span>&nbsp;&nbsp;&nbsp;</span>{{ manager?.name }}</td>
+      </tr>
+      <tr> 
+        <td><b>Approver</b></td>
+        <td><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>-<span>&nbsp;&nbsp;&nbsp;</span>{{ manager?.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

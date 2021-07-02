@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.form-control {
+  border: 3px solid #6B6B6B;
+  width: 70%;
+  height: 30%;
+}
+
+#save-btn {
+  background-color: orange;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: absolute; left: 60%; right: 10%; bottom: 5%; width: 100px;
+}
+
+#submit-btn {
+  background-color: #2554C7;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: absolute; left: 80%; right: 20%; bottom: 5%; width: 100px;
+}
+
+#unsubmit-btn {
+  background-color: #2554C7;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: absolute; left: 80%; right: 20%; bottom: 5%; width: 100px;
+}
+
+#submit-btn[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+#save-btn[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+#table-container{
+  padding: 0%;
+}
+
+.select-container{
+  padding:10px;
+  position: relative;
+  border-radius: 3px;
+}
+.select-container select{
+  width: 40%;
+  right:10px;
+  padding: 0.25em 0.25em;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.select-container::after{
+  content: 'keyboard_arrow_down';
+  font-family: 'material icons';
+  font-size: 24px;
+  color:#666;
+  position: absolute;
+  right:10px;
+  top:10%;
+  left: 270px;
+  transform: translateY(-30%);
+  pointer-events:none;
+}
+
+.select-text {
+  width: 80%;
+  left:10px;
+  padding:10px;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.btn-arrange{
+  right: 100px;
+}

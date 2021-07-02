@@ -1,0 +1,22 @@
+<mat-toolbar color ="primary" class="mat-elevation-z6" role="heading">
+	
+	<button   mat-icon-button (click)="hideNav()">
+		<mat-icon *ngIf="(isManager)" color="accent">menu</mat-icon>
+	</button>
+
+	<button mat-button >
+		<span><img id="image-logo" src="../assets/images/kinsale_logo.png"></span>
+	</button>
+	
+	<div class="flex-spacer"></div>
+	<button mat-button [matMenuTriggerFor]="menu">
+        <span>{{username}}</span>
+        <mat-icon>account_circle</mat-icon>
+    </button>
+	<mat-menu #menu="matMenu">
+		<button  mat-menu-item (click) ="logoutUser()">Logout</button>
+    </mat-menu>
+	
+    
+
+</mat-toolbar>

@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1111,
+    "username": "test1111",
+    "password": "testpwd",
+    "name": "Sachin T",
+    "isManager": false,
+    "designation": "IT-app-dev-Java-Lead",
+    "timesheet": [
+      {
+        "isApproved": true,
+        "isSubmitted": true,
+        "dateRange": {
+          "start": "2021-06-26T04:00:00.000Z",
+          "end": "2021-07-02T04:00:00.000Z"
+        },
+        "timesheetHours": {
+          "sunHours": 0,
+          "monHours": 8,
+          "tueHours": 9,
+          "wedHours": 8,
+          "thuHours": 0,
+          "friHours": 0,
+          "satHours": 0
+        },
+        "comments": "testing"
+      }
+    ],
+    "isFullTime": true,
+    "reportingManager": "1100"
+  },
+  {
+    "id": 2222,
+    "username": "test2222",
+    "password": "testpwd",
+    "name": "Rahul D",
+    "isManager": false,
+    "designation": "IT-app-dev-Java-Developer",
+    "timesheet": [
+      {
+        "isApproved": false,
+        "isSubmitted": false,
+        "dateRange": {
+          "start": "2021-06-26T04:00:00.000Z",
+          "end": "2021-07-02T04:00:00.000Z"
+        },
+        "timesheetHours": {
+          "sunHours": 0,
+          "monHours": 9,
+          "tueHours": 9,
+          "wedHours": 9,
+          "thuHours": 9,
+          "friHours": 9,
+          "satHours": 0
+        },
+        "comments": "working"
+      },
+      {
+        "isApproved": false,
+        "isSubmitted": true,
+        "dateRange": {
+          "start": "2021-07-03T04:00:00.000Z",
+          "end": "2021-07-09T04:00:00.000Z"
+        },
+        "timesheetHours": {
+          "sunHours": 0,
+          "monHours": 0,
+          "tueHours": 0,
+          "wedHours": 0,
+          "thuHours": 0,
+          "friHours": 0,
+          "satHours": 0
+        },
+        "comments": ""
+      }
+    ],
+    "isFullTime": true,
+    "reportingManager": "1100"
+  },
+  {
+    "id": 3333,
+    "username": "test3333",
+    "password": "testpwd",
+    "name": "Mahendra S D",
+    "isManager": false,
+    "designation": "IT-app-dev-Java-Lead",
+    "timesheet": [
+      {
+        "isApproved": true,
+        "isSubmitted": true,
+        "dateRange": {
+          "start": "2021-06-26T04:00:00.000Z",
+          "end": "2021-07-02T04:00:00.000Z"
+        },
+        "timesheetHours": {
+          "sunHours": 0,
+          "monHours": 6,
+          "tueHours": 7,
+          "wedHours": 0,
+          "thuHours": 0,
+          "friHours": 0,
+          "satHours": 0
+        },
+        "comments": ""
+      }
+    ],
+    "isFullTime": false,
+    "reportingManager": "1100"
+  },
+  {
+    "id": 1100,
+    "username": "mgr0011",
+    "password": "testpwd",
+    "name": "Shwetha Dasan",
+    "isManager": true,
+    "designation": "Project Manager",
+    "timesheet": [],
+    "isFullTime": true,
+    "reportingManager": "Manager"
+  }
+]

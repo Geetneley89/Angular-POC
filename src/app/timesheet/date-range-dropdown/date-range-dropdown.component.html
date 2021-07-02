@@ -1,0 +1,114 @@
+<form *ngIf="campaignTwo" [formGroup]="campaignTwo" (ngSubmit)="onSubmit($event.submitter.id)">
+  <div>
+    <span>&nbsp;&nbsp;</span>
+  </div>
+  <div class="select-container">
+    <select  id="dateRanges" formControlName="dateRangeSelected" (change)="onDateRangeChange()">
+      <option *ngFor="let dateRange of dateRanges; let i = index" [ngValue]="dateRanges[i]">
+        <span>&nbsp;</span> {{dateRange.start | date: 'M/d/YYYY'}}  - {{dateRange.end | date: 'M/d/YYYY'}}
+      </option>
+    </select>
+    <span>&nbsp;&nbsp;</span>
+    <span>&nbsp;&nbsp;</span>
+    <select id="paycode" disabled>
+       <option>{{ userPayCode }}</option>
+    </select>
+    <div>
+      <span>&nbsp;&nbsp;</span>
+    </div>
+
+    <section class="table">
+      <div class="rnd-corner">
+        <div class="table-container">
+          <table class="custab  table-responsive" style='font-family:"Courier New", Courier, monospace; font-size:70% ;'>
+            <thead>
+            <tr>
+              <th>Sat <img title="week-off" src="https://img.icons8.com/doodle/20/000000/weekend-1.png"/><br> {{sat}}</th>
+              <th>Sun <img title="week-off" src="https://img.icons8.com/doodle/20/000000/weekend-1.png"/><br> {{sun}}</th>
+              <th>Mon <br> {{mon}}</th>
+              <th>Tue <br> {{tue}}</th>
+              <th>Wed <br> {{wed}}</th>
+              <th>Thu <br> {{thu}}</th>
+              <th>Fri <br> {{fri}}</th>
+              <th></th>
+              <th></th>
+              <th>Total <br> </th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="number" class="form-control" formControlName="satHours" required="required" 
+                  (change)="onChangeEvent($event)">
+                </td>
+                <td>
+                  <input type="number" class="form-control"  formControlName="sunHours" required="required" 
+                  (change)="onChangeEvent($event)">
+                </td>
+                <td>
+                  <input type="number" class="form-control" formControlName="monHours" required="required" 
+                  (change)="onChangeEvent($event)">
+                </td>
+                <td>
+                  <input type="number" class="form-control" formControlName="tueHours" required="required" 
+                  (change)="onChangeEvent($event)">
+                </td>
+                <td>
+                  <input type="number" class="form-control" formControlName="wedHours" required="required" 
+                  (change)="onChangeEvent($event)">
+                </td>
+                <td>
+                  <input type="number" class="form-control" formControlName="thuHours" required="required" 
+                  (change)="onChangeEvent($event)">
+                </td>
+                <td>
+                  <input type="number" class="form-control" formControlName="friHours" required="required" 
+                  (change)="onChangeEvent($event)">
+                </td>
+                <td>
+                 <span>&#61;</span>
+                </td>
+                <td></td>
+                 <td>
+                  {{total}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <div>
+      <span>&nbsp;&nbsp;</span>
+    </div>
+  </div>
+  <div class="form-outline w-50 mb-4">
+    <textarea class="select-text" placeholder="Comments" id="comments" name="comments" formControlName="comments" rows="3"></textarea>
+  </div>
+
+    <div class="row"  *ngIf="showMsg">
+      <div class="col-xs-12">
+        <p class="alert alert-success">
+            <strong>{{ msg }}</strong>
+        </p>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="alert alert-danger" *ngIf="isHoursInvalid">
+        <strong>The timsheet for a day cannot exceed 24 hours</strong>
+    </p>
+    </div>
+  </div>
+
+    <button  id="save-btn" class="submit-button btn-success" [disabled]="isDisabled"> Save </button>
+    <div *ngIf="!allowUnsubmit; else elseBlock">
+      <button type="submit"  id="submit-btn" class="submit-button btn-success" [disabled]="isDisabled"> Submit </button>
+    </div>
+    <ng-template #elseBlock>
+      <div>
+    <button type="submit"  id="unsubmit-btn" class="submit-button btn-success"> Unsubmit </button>
+        </div>
+    </ng-template>
+  </form>

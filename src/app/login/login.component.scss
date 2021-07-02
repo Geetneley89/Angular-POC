@@ -1,0 +1,58 @@
+.blue-gradient {
+  background-image: url('../../assets/images/blue_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+  .row {
+    background-color: white; 
+    border-style: outset;
+  }
+
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  }
+ 
+  #login-div {
+    margin:5%;
+    border-radius: 5%;
+  }
+  #login-btn {
+    background-color: orange;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-weight: bold;
+  }
+  #forgot-password {
+    float: right;
+    color: white;
+    text-decoration: underline;
+  }
+  #kinsale-logo {
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .input-container {
+    position: relative;
+  }
+  
+  .input-container > i {
+    position: absolute;
+    top: 30%;
+    left: 2%;
+  }
+  
+  .input-container > input {
+    padding-left: 10%;
+  }
+
+  .fa-lock, .fa-user {
+      color: orange;
+  }

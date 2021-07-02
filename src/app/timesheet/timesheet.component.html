@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div>
+  <span>&nbsp;</span>
+</div>
+
+<div class="container">
+  <div class="row no-gutters">
+      <mat-tab-group  dynamicHeight>
+        <mat-tab >
+          <ng-template mat-tab-label> 
+            <p style="color:rgb(54, 131, 182);">  Timesheet  </p> 
+          </ng-template>
+          <br>
+          <div class="row">
+            <div class="col-md-8">
+            <span class ="timesheets-text">Viewing timehseets for supplier : <b>{{ username }}</b></span>
+            <app-date-range-dropdown></app-date-range-dropdown>
+            </div>
+            <div class="col-md-4">
+              <app-user-details></app-user-details>
+          </div>
+          </div>
+        </mat-tab>
+        <mat-tab >
+          <ng-template mat-tab-label> 
+            <p style="color:rgb(54, 131, 182);"> Expenses  </p> 
+          </ng-template>
+          <h1>Page Under Maintenance</h1>
+        </mat-tab>
+  </mat-tab-group>
+</div>
+</div>

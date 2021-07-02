@@ -1,0 +1,32 @@
+.example-form-field {
+    margin-right: 40px;
+  }
+
+.form-control {
+  border: 3px solid #6B6B6B;
+  width: 60%;
+  height: 30%;
+}
+
+#save-btn {
+  background-color: orange;
+
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: absolute; left: 60%; right: 10%; bottom: 5%; width: 100px;
+}
+
+#submit-btn {
+  background-color: blue;
+
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: absolute; left: 80%; right: 20%; bottom: 5%; width: 100px;
+}
+
+#comments {
+  position: absolute; left: 12%;
+}
+

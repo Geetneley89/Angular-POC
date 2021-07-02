@@ -1,0 +1,86 @@
+<div class="section">
+   <div class="container col-10 col-md-10 mt-4" style="overflow: auto;">
+      <div class="row mx-3 mt-3">
+         <div class="col-12">
+            <h2>Manager Approvals</h2>
+         </div>
+      </div>
+      <div class="row mx-3">
+         <div class="col-12">
+            Approve the timesheets of the reporting Employees
+         </div>
+         <hr>
+      </div>
+      <div class="row mx-3 mt-4">
+         <form [formGroup]="approvalsForm" (ngSubmit)="onSubmit($event.submitter.id)">
+            <div class="select-container">
+               <div>
+               View Submitted timesheets by selecting week range
+               <select class="form-select" formControlName="dateRangeSelected" (change)="onDateRangeChange()" style="width: 40%;">
+                  <option *ngFor="let dateRange of dateRanges; let i = index" [ngValue]="dateRanges[i]">
+                     <span>&nbsp;</span> {{dateRange.start | date: 'M/d/YYYY'}} - {{dateRange.end | date:
+                     'M/d/YYYY'}}
+                  </option>
+               </select>
+            </div>
+            <div *ngIf="(submittedTimeSheetMap | keyvalue)?.length; else elseBlock" >
+               <table class="table table-hover ">
+                  <thead>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <!-- commenting below for now as more logix needs to be added for this -->
+                        <!-- <td style="width: 5%;">
+                           <div class="form-check">
+                              <input class="form-check-input" type="checkbox" (change)="isSelected = !isSelected">All/None
+                           </div>
+                        </td> -->
+                     </tr>
+                  </thead>
+                  <tbody *ngFor="let user of submittedTimeSheetMap | keyvalue">
+                     <tr>
+                        <td>{{ user.key.name}}</td>
+                        <td>{{ user.value.dateRange.end | date:'shortDate' }}</td>
+                        <td>{{ totalHours(user.value.timesheetHours) }}</td>
+                        <td><input type="button" class="btn btn-info" value="View" (click)="onClickView(user.value.timesheetHours)"/> </td>
+                        <td>
+                           <div class="form-check">
+                              <input class="form-check-input" type="checkbox"
+                              (change)="onCheckboxChange(user,$event)">
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+
+            <div class="form-group">
+               <button id="approveBtn" type="submit" class="btn btn-success btn-block" [disabled]="disable"> Approve Selected </button>
+               &nbsp;
+               <button id="rejectBtn" type="submit" class="btn btn-danger btn-block" [disabled]="disable"> Reject Selected </button>
+            </div>
+         </div>
+         <br>
+
+         <div class="row">
+            <ng-template #elseBlock>
+               <div class="col-xs-12">
+                  <p class="alert alert-success">
+                     <strong>Hurray!! No pending action for this week</strong>
+                  </p>
+               </div>
+            </ng-template>
+         </div>
+         <div class="row"  *ngIf="showMsg">
+            <div class="col-xs-12">
+               <p class="alert alert-success">
+                  <strong>{{ msg }}</strong>
+               </p>
+            </div>
+            </div>
+          </div>
+         </form>
+      </div>
+   </div>
+</div>

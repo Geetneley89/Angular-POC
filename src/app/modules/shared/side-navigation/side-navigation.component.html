@@ -1,0 +1,31 @@
+<app-header></app-header>
+<mat-sidenav-container  autosize="true">
+    <mat-sidenav mode="side" [(opened)]="opened">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="'/dashboard/approvals'" routerLinkActive='active'>
+          <span class="material-icons" > check </span> <span>&nbsp;</span>
+          Approvals
+        </a>
+        <a mat-list-item [routerLink]="'/dashboard/create'" routerLinkActive='active'>
+          <span class="material-icons"> topic </span><span>&nbsp;</span>
+          Create
+        </a>
+        <a mat-list-item [routerLink]="'/dashboard/assignments'" routerLinkActive='active'>
+          <span class="material-icons"> assignment </span><span>&nbsp;</span>
+          Assignments
+        </a>
+        <a mat-list-item [routerLink]="'/dashboard/quickreports'" routerLinkActive='active'>
+          <span class="material-icons"> speaker_notes </span><span>&nbsp;</span>
+          Quick Reports </a>
+        <a mat-list-item [routerLink]="'/dashboard/review-candidates'" routerLinkActive='active'>
+          <span class="material-icons"> groups </span><span>&nbsp;</span>
+          Review Candidates
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="height: 80vh">
+        <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

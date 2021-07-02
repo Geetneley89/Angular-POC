@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body class="blue-gradient">
+  <section class="min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-xs col-sm col-md col-lg col-xl">
+          <img width="80%" src="../assets/images/user.png">
+        </div>
+        <div class="col-xs-8 col-sm-3 col-md-3 col-lg-3 col-xl-3 blue-gradient" id="login-div">
+          <form style="margin-top: 20%;" #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" autocomplete="off">
+            <span><img id="kinsale-logo" src="../assets/images/kinsale_logo_white_nb.png"></span>
+            <div style="margin-top: 10%;">
+              <span>&nbsp;</span>
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="invalidCred">
+              {{errorMsg}}
+            </div>
+            <div class="form-group input-container">
+              <i class="fa fa-user"></i>
+              <input type="text" class="form-control" name="username" placeholder="User name" required="required"
+                ngModel>
+            </div>
+            <div>
+              <span>&nbsp;</span>
+            </div>
+            <div class="form-group input-container">
+              <i class="fa fa-lock"></i>
+              <input type="password" class="form-control" name="pwd" placeholder="Password" required="required" ngModel>
+            </div>
+            <div class="clearfix">
+              <a href="#" id="forgot-password">Forgot Password</a>
+            </div>
+            <div>
+              <span>&nbsp;</span>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block" id="login-btn"
+                [disabled]="!userlogin.valid">Login</button>
+              <div>
+                <span>&nbsp;</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

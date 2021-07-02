@@ -1,0 +1,66 @@
+<form [formGroup]="campaignTwo" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill" class="example-form-field">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input [rangePicker]="rangePicker" [dateFilter]="myFilter">
+      <input matStartDate placeholder="Start date" formControlName="start" #dateRangeStart>
+      <input matEndDate placeholder="End date" formControlName="end" #dateRangeEnd>
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+    <mat-date-range-picker #rangePicker></mat-date-range-picker>
+  </mat-form-field>
+  <div>
+    <span>&nbsp;&nbsp;</span>
+  </div>
+  <section class="table">
+    <div class="rnd-corner">
+      <div class="container">
+        <table class="custab  table-responsive" style='font-family:"Courier New", Courier, monospace; font-size:70% ;'>
+          <thead>
+          <tr>
+            <th>Sun <br> {{sun}}</th>
+            <th>Mon <br> {{mon}}</th>
+            <th>Tue <br> {{tue}}</th>
+            <th>Wed <br> {{wed}}</th>
+            <th>Thu <br> {{thu}}</th>
+            <th>Fri <br> {{fri}}</th>
+            <th>Sat <br> {{sat}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <input type="description1" class="form-control"  formControlName="sunHours" name="description1"  required="required" ngModel>
+            </td>
+            <td>
+              <input type="description2" class="form-control" formControlName="monHours" name="description2" required="required" ngModel>
+            </td>
+            <td>
+              <input type="description3" class="form-control" formControlName="tueHours" name="description3"  required="required" ngModel>
+            </td>
+            <td>
+              <input type="description4" class="form-control" formControlName="wedHours" name="description4"  required="required" ngModel>
+            </td>
+            <td>
+              <input type="description5" class="form-control" formControlName="thuHours" name="description5"  required="required" ngModel>
+            </td>
+            <td>
+              <input type="description6" class="form-control" formControlName="friHours" name="description6"  required="required" ngModel>
+            </td>
+            <td>
+              <input type="description7" class="form-control" formControlName="satHours" name="description7" required="required" ngModel>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <div>
+    <span>&nbsp;&nbsp;</span>
+  </div>
+  <textarea placeholder="Comments" id="comments" name="comments"></textarea>
+  <button  id="save-btn" class="submit-button btn-success"> Save </button>
+  <button  type="submit"  id="submit-btn" class="submit-button btn-success"> Submit </button>
+
+</form>
+
